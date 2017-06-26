@@ -1,16 +1,16 @@
 {
   "name": "phantomjs-prebuilt",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "keywords": [
     "phantomjs",
     "headless",
     "webkit"
   ],
   "description": "Headless WebKit with JS API",
-  "homepage": "https://github.com/Medium/phantomjs",
+  "homepage": "https://github.com/JoeyLi-1/phantomjs-1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Medium/phantomjs.git"
+    "url": "git://github.com/JoeyLi-1/phantomjs-1.git"
   },
   "license": "Apache-2.0",
   "author": {
@@ -28,6 +28,10 @@
       "name": "Nick Santos",
       "email": "nick@medium.com",
       "web": "http://nick-santos.com/"
+    },
+    {
+      "name": "Joey Li",
+      "email": "joey@clarifyhealth.com"
     }
   ],
   "main": "lib/phantomjs",
