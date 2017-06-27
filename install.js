@@ -306,9 +306,15 @@ function copyIntoPlace(extractedPath, targetPath) {
     var files = fs.readdirSync(extractedPath)
     for (var i = 0; i < files.length; i++) {
       var file = path.join(extractedPath, files[i])
-      if (fs.statSync(file).isDirectory() && file.indexOf(helper.version) != -1) {
-        console.log('Copying extracted folder', file, '->', targetPath)
-        return kew.nfcall(fs.move, file, targetPath)
+      if (fs.statSync(file).isDirectory()){
+        if(file.indexOf(helper.version) != -1) {
+          console.log('Copying extracted folder', file, '->', targetPath)
+          return kew.nfcall(fs.move, file, targetPath)
+        } else {
+          console.log('Could not find version', helper.version);
+        }
+      } else {
+        console.log('Invalid path', file);
       }
     }
 
